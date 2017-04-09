@@ -88,7 +88,7 @@ print(n_long_words(words, n)
    # return ['the wrong thing']
 
 
-#def smallest_int(numbers):
+def smallest_int(numbers):
     """Find the smallest integer in a list of integers and return it.
 
     **DO NOT USE** the built-in function `min()`!
@@ -104,8 +104,8 @@ print(n_long_words(words, n)
     If the input list is empty, return `None`::
 
         >>> smallest_int([]) is None
-        True
-    """
+        True"""
+
     if len(numbers) == 0:
         return "None"
 
@@ -144,8 +144,21 @@ def largest_int(numbers):
         >>> largest_int([]) is None
         True
     """
+    if len(numbers) == 0:
+        return "None"
 
-    return 0
+    numbers = ([-5, 2, -5, 7, 9, -3, 98])
+    numbers.sort()
+    sorted_numbers = sorted(numbers)
+    reversed(sorted_numbers)
+    
+    #else:
+    return numbers[-1] 
+
+numbers = ([-5, 2, -5, 7, 9, -3, 98])
+
+print (largest_int(numbers))
+    #return 0
 
 
 def halvesies(numbers):
@@ -163,7 +176,6 @@ def halvesies(numbers):
         [0.5, 2.5]
     """
 
-    return []
 
 
 def word_lengths(words):
@@ -174,8 +186,12 @@ def word_lengths(words):
         >>> word_lengths(["hello", "hey", "hello", "spam"])
         [5, 3, 5, 4]
     """
+input_list = []
+for words in word_lengths.split():
+    word_length = len(words)
+    input_list.append(word_list)
+    print input_list 
 
-    return []
 
 
 def sum_numbers(numbers):
