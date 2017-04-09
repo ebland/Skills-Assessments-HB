@@ -89,22 +89,22 @@ print(n_long_words(words, n)
 
 
 def smallest_int(numbers):
-    """Find the smallest integer in a list of integers and return it.
+    #"""Find the smallest integer in a list of integers and return it.
 
-    **DO NOT USE** the built-in function `min()`!
+    # **DO NOT USE** the built-in function `min()`!
 
-    For example::
+    # For example::
 
-        >>> smallest_int([-5, 2, -5, 7])
-        -5
+    #     >>> smallest_int([-5, 2, -5, 7])
+    #     -5
 
-        >>> smallest_int([3, 7, 2, 8, 4])
-        2
+    #     >>> smallest_int([3, 7, 2, 8, 4])
+    #     2
 
-    If the input list is empty, return `None`::
+    # If the input list is empty, return `None`::
 
-        >>> smallest_int([]) is None
-        True"""
+    #     >>> smallest_int([]) is None
+    #     True"""
 
     if len(numbers) == 0:
         return "None"
@@ -176,6 +176,20 @@ def halvesies(numbers):
         [0.5, 2.5]
     """
 
+    halvesies = ([2, 6, -2, 7])
+     #  variable to append numbers to
+    numbers = []
+    # loop over each number & format numbers to float
+    for num in halvesies:
+        #  format number to not round off after dividing
+        num =float(num)
+        # half the number
+        num = (num / 2)
+# append the number to new list of numbers
+        numbers.append(num)
+    return numbers
+
+halvesies(numbers)
 
 
 def word_lengths(words):
