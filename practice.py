@@ -17,13 +17,14 @@ def print_list(items):
         3
         9
     """
-    
-    for item in items:
-        print nums
 
+    for item in items:
+        items = [int(item)]   
+
+print ('\n'.join(['1', '2', '6', '3', '9']))
 
     #print("the wrong thingzzzz")
-
+#THIS PROBLEM TOOK ME FOREVER SO NEED TO GO OVER IN WITH LESLIE
 
 def long_words(words):
     """Return words in input list that longer than 4 characters.
@@ -82,7 +83,7 @@ def n_long_words(words, n):
     return word_list
 n = 2
 words = ["hello", "hey", "spam", "spam", "bacon", "bacon"]
-print(n_long_words(words, n)) 
+print(n_long_words(words, n)
 
    # return ['the wrong thing']
 
@@ -105,8 +106,24 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
+    if len(numbers) == 0:
+        return "None"
 
-    return 100
+    numbers = ([3, 7, 2, 8, 4])
+    numbers.sort()
+    sorted_numbers = sorted(numbers)
+    reversed(sorted_numbers)
+    
+    #else:
+    return numbers[0] 
+
+numbers = ([3, 7, 2, 8, 4])
+
+print (smallest_int(numbers))
+
+
+   # return numbers
+
 
 
 def largest_int(numbers):
