@@ -116,9 +116,9 @@ def smallest_int(numbers):
     #else:
     return numbers[0] 
 
-numbers = ([3, 7, 2, 8, 4])
+    numbers = ([3, 7, 2, 8, 4])
 
-print (smallest_int(numbers))
+smallest_int(numbers)
 
 
    # return numbers
