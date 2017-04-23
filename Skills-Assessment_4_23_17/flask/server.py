@@ -22,12 +22,12 @@ def response_page():
     #Get responses assign to variable names
     firstname = request.form.get("firstname")
     lastname = request.form.get("lastname")
-    jobtitle = request.form.get("jobtitle")
-    salaryrequirement = request.form.get("salaryrequirement")
-    salaryrequirement = str(salaryrequirement)
+    jobtype = request.form.get("jobtype")
+    salary = request.form.get("salary")
+    salary = str(salary)
 
     #Render to response template
-    return render_template("application-response.html", firstname = firstname, lastname = lastname, jobtitle = jobtitle, salaryrequirement = salaryrequirement)
+    return render_template("application-response.html", firstname = firstname, lastname = lastname, jobtype = jobtype, salary = salary)
 
 
 
