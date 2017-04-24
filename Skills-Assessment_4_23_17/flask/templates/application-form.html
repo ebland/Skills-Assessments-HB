@@ -1,84 +1,40 @@
+{% extends 'base.html' %} 
+{% block title %}Application Form{% endblock %}
+
+{% block content %}
 <!doctype html>
-<html lang="en">
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta content="Application for Employment" name="description">
-  <meta content="Elizabeth Bland" name="author">
-  <meta content="applicant form, application, job application, online job, application" name="keywords">
-  <title>Application for Employment | Form</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+    <head>
+<h1>Application Form</h1>
 
-<body>
+  <p id="instructions">Type or print all information requested on the application form. Applications not completely and accurately filled in and accompanied by all required supporting materials will be returned to the applicant. It is advisable after filling out the application online to print an extra copy to keep with your records.</p>
 
-  <div>
-  <p>Type or print all information requested on the application form. Applications not completely and accurately filled in and accompanied by all required supporting materials will be returned to the applicant. It is advisable after
-  filling out the application online to print an extra copy to keep with your records.</p>
-  </div>
-
-<div>
-  <form action="/application-success" method="POST">
-    <div>
-      <div>First Name:</div>
-      <div>
-      <input type="text" id="firstname" class="" name="firstname" required>
-      </div>
-    </div>
-    <div>
-      <div>Last Name:</div> 
-      <div> <input id="lastName" type="text" class="last_name" name="lastname" required></div>
-    </div>
-    <div>
-      <div>Starting Salary: <input type="number" class="" id="salary" name="salary" required></div>
-    </div>
-    <div>
-      <div>
-      Position Applying For:
-      <select class="" name="jobtype">
-          <option value="softwareengineer">Software Engineer</option>
-          <option value="qaengineer">QA Engineer</option>
-          <option value="productengineer">Product Engineer</option>
-      </select>
-      </div>
-    </div>
-    <div>
-      <input class="button" type="button"  name="submit" value="Submit">
-    </div>
-  </form>
-</div>
-
-<footer>
-</footer>
-</body>
+<form action="/application" method="POST">
+        <label for="firstname">First Name:</label>
+        <input id="firstname" type="text" name="firstname">
+        <br>
+        <br>
+        <label for="lastname">Last Name:</label>
+        <input id="lastname" type="text" name="lastname">
+        <br>
+        <br>
+        <label for="salary">Salary Requirement (Please enter a number):</label>
+        <input id="salary" type="text" name="salary" value="50000">
+        <br>
+        <br>
+        <label for="jobtype">Which position are you applying for? (Please select one)</label>
+        <select id="jobtype" name="jobtype">
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="QA Engineer">QA Engineer</option>
+            <option value="Product Manager">Product Manager</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+      </body>
 </html>
-
- <!-- <hr>
- <h4> Problem 2</h4>
-    <ol>
-     <li> (DONE)  make styles.css, </li>
-     <li> (DONE)  use this to stylize the HTML file, application-form.html. </li>
-     <li> (DONE)  edit the HTML file to reference the CSS include Bootstrap CDN.<li>
-     <li> (DONE)  complete each of the following styles: </li>
-     <li> (DONE)  Change the background color of all of the form input boxes and submit button to be yellow.</li>
-     <li>(Can you do this for all input boxes without having to stylize each one independently?)  YES</li>
-     <li> Change the text in the last name field to be bold.</li>
-     <li> Draw a border around the instruction text.</li>
-     <li> Add the appropriate classes to your HTML to reposition your form using the Bootstrap grid.</li>
-    </ol> -->
-<form>
-  <div class="form-group">
-    <label for="first_name">First Name</label>
-    <input type="firstname" class="form-control" id="firstname" placeholder="First Name">
-  </div>
-
-<!--BOOTSTRAP PART I ATTEMPTED BUT DO NOT KNOW WHAT YOU WHAT ME TO DO ON IT EXACTLY?
-
+{% endblock %}
 
   
      

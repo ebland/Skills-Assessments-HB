@@ -17,6 +17,10 @@ img {
     height: 2px;
 }
 
+body {
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-size: 1em;
+
 #instructions {
     border: 1px solid black;
     width: 20%;
@@ -24,24 +28,10 @@ img {
     font-size: 125%;
 }
 
-#userinfoform {
-    width: 60%;
-    padding-left: 1em;
+form input {
+    background-color: #FFFC83;
 }
 
-#lastname {
-    font-weight: bold;
-}
-
-#salaryrequirement {
-    width: 21em;
-}
-
-#submit {
-    width: 18em;
-}
-
-#thankyou {
-    font-size: 120%;
-    width: 80%;
+form input, select {
+    font-size: 1em;
 }
